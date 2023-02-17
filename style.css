@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    margin: 0px 25px;
+    max-width: 1600px;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo-name{
+    font-family: 'Nova Round', cursive;
+    font-size: 32px;
+    font-weight: 400;
+    padding-left: 20px;
+}
+
+.navbar{
+    margin-top: 10px;
+    background-color: #fff;
+    max-width: 1600px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar li{
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    font-size: 1.5rem;
+    display: inline-block;
+    margin: 0px 20px;
+    position: relative;
+}
+
+.navbar li::after{
+    content: " ";
+    width: 0%;
+    height: 3px;
+    background-color: #FFC94A;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+    position: absolute;
+}
+
+.navbar li:hover::after{
+    width: 100%;
+}
+
+#black{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 40px;
+    padding: 0px 50px;
+    border-radius: 0px 100px;
+    background: #000;
+    color: #fff;
+    height: 400px;
+}
+
+
+#black .artefatos{
+    height: 251px;
+    max-width: 675px;
+    flex-direction: column;
+}
+
+.artefatos h1{
+    margin-bottom: 50px;
+}
+
+
+
+#black .side1{
+    margin-left: 6rem;
+    max-width: 690px;
+    height: 330px;
+    text-align: end;
+    line-height: 2.5rem;
+}
+
+
+.bottom-yellow{
+    background: #FFC94A;
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 10px;
+    padding: 14px;
+}
+
+.bottom-yellow:hover{
+    background-color: #FFB300;
+    transition: ease-in-out .2s;
+}
+
+.bottom{
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+
+.white{
+    padding: 0px 50px;
+    height: 416px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mid li{
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+
+.bottom-green{
+    background: #34AF23;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 10px;
+    padding: 14px;
+    width: 170px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.bottom-green:hover{
+    background-color: #257d1a;
+    transition: ease-in-out .2s;
+}
+
+.white a{
+    gap: 7px;
+}
+
+.white h1{
+    display: flex;
+    align-items: center;
+}
+
+.white i{
+    margin-right: 0.5rem;
+    font-size: 2.2rem;
+}
+
+.white .icon-contacts{
+    font-size: 1.5rem;
+}
+
+
+.yellow{
+    padding: 0px 50px;
+    height: 602px;
+    background: #FFB300;
+    border-radius: 0px 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    transition: background 0.4s ease-in;
+}
+
+.yellow h1{
+    display: flex;
+    align-items: center;
+}
+
+.yellow i{
+    margin-right: 0.5rem;
+    font-size: 2.5rem;
+}
+
+input[type=radio]{
+    display: none;
+}
+
+.card{
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    margin: 50px 100px;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 500px;
+    transform-style: preserve-3d;
+}
+
+.cards{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#item-1:checked ~ .cards #song-3,
+#item-2:checked ~ .cards #song-1,
+#item-3:checked ~ .cards #song-2{
+    transform: translateX(-60%) scale(0.8);
+    opacity: 0.4;
+    z-index: 0;
+}
+
+#item-1:checked ~ .cards #song-2,
+#item-2:checked ~ .cards #song-3,
+#item-3:checked ~ .cards #song-1{
+    transform: translateX(60%) scale(0.8);
+    opacity: 0.4;
+    z-index: 0;
+}
+
+#item-1:checked ~ .cards #song-1,
+#item-2:checked ~ .cards #song-2,
+#item-3:checked ~ .cards #song-3{
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index: 1;
+}
+
+#item-1:checked ~ .cards #song-1 img,
+#item-2:checked ~ .cards #song-2 img,
+#item-3:checked ~ .cards #song-3 img{
+    box-shadow: 0px 0px 5px 0px #000;
+}
+
+
+.final span{
+    padding-left: 20px;
+}
+
+.barra{
+    background: #FFB300;
+    height: 150px;
+    width: 6px;
+    border-radius: 4px;
+    margin-left: 500px;
+}
+
+.side4 li{
+    margin-left: 1rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+
